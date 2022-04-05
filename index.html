@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Rocco Izzo</title>
+        <!-- Favicon-->
+        <link rel="icon" href="assets/img/logo-rocco.svg">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <title>Contact Form</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+        emailjs.init("NsY9Jk8oFbhxnPWnQ");
+        })();
+        </script>
+
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_xpf79qn', 'template_47bafqv', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+         </script>
+       </head>
+    <body id="page-top">
+
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Rocco Izzo</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+                <li class="sidebar-nav-item"><a href="#about">About Me</a></li>
+                <li class="sidebar-nav-item"><a href="#services">I miei servizi</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="sidebar-nav-item"><a href="#contact-form">Contattami</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-1"><font color="white">Ciao, sono Rocco Izzo</font></h1>
+                <h3 class="mb-5"><em><font color="white">Sono un Web Content</font></em></h3>
+                <a class="btn btn-primary btn-xl" href="#contact-form">Contattami</a>
+            </div>
+        </header>
+
+        <!-- About-->
+        <section class="content-section bg-light" id="about">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>About Me</h2>
+                        <p class="lead mb-5">
+                          <p>Sono <b>Rocco Izzo</b>, ho 27 anni e vivo a Napoli. <br>
+                              Sono sempre stato affascinato dal <b>mondo aziendale</b>, volevo capire
+                              come loro riuscissero a raggiungere un determinato successo e come poter
+                              contribuire a ciò. Queste mie passioni mi hanno condotto al mondo del
+                              <b>digital marketing</b>.
+                             Durante il mio percorso lavorativo sono diventato un <b>Web Content</b>
+                             con l'obiettivo di creare <b>contenuti di qualità</b> per un target definito.<br><br>
+                             La frase che racchiude il mio credo è la seguente: <br>
+                             <em>"La capacità di semplificare significa eliminare il superfluo in modo che il necessario possa parlare."</em>
+                           </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services-->
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h3 class="text-secondary mb-0">I miei servizi</h3>
+                    <h2 class="mb-5"> Skills</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <h4><strong>SEO-Copywriting</strong></h4>
+                        <p class="text-faded mb-0">Scrittura di articoli, landing page, creazione di testi e micro testi
+                        per facilitare l'utente nella navigazione sul sito.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                        <h4><strong>E-commerce Content</strong></h4>
+                        <p class="text-faded mb-0">Scrittura e ideazione di testi e contenuti, ottimizzati in ottica SEO, per categorie, sottocategorie
+                          e schede prodotto.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-envelope"></i></span>
+                        <h4><strong>Email Marketing</strong></h4>
+                        <p class="text-faded mb-0">
+                            Realizzazione di campagne di mail marketing con conseguente misurazione dei risultati e dell'andamento delle attività.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-brands fa-magento"></i></span>
+                        <h4><strong>Piattaforme CMS</strong></h4>
+                        <p class="text-faded mb-0">Gestione di contenuti e della UX/UI su piattaforme quali:
+                        Hubspot, Wordpress e Magento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Portfolio-->
+        <section class="content-section" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Portfolio</h3>
+                    <h2 class="mb-5">I miei articoli</h2>
+                </div>
+                <div class="row gx-0">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="https://www.linkedin.com/pulse/creare-un-blog-personale-per-ricercare-nuovo-lavoro-rocco-izzo/"target="_blank">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">L'importanza di creare un blog personale</div>
+                                    <p class="mb-0">Vista la situazione occupazionale perché creare un blog personale può essere utile nel ricercare un nuovo lavoro?</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/creare-blog.jpg" alt="Come creare un blog" />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="https://www.linkedin.com/pulse/creativit%C3%A0-la-soft-skill-da-avere-per-emergere-nel-mondo-rocco-izzo/" target="_blank">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Creatività: la soft skill da avere per emergere nel mondo del lavoro</div>
+                                    <p class="mb-0">Circa due anni fa il W.E.F. elencò alcune competenze necessarie da avere, entro il 2020, nel mondo del lavoro.
+                                      </p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/creatività.jpg" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="https://www.linkedin.com/pulse/la-capacit%C3%A0-di-lavorare-gruppo-e-limportanza-delle-soft-rocco-izzo" target="_blank" >
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">La capacità di lavorare in gruppo e l’importanza delle soft skill</div>
+                                    <p class="mb-0">Cosa si intende per soft skill e perché saper lavorare in gruppo,
+                                      è un requisito fondamentale per avere successo.</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/soft-skill.jpg" alt="..." />
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="https://blog.makersvalley.it/scopri-come-rendere-il-tuo-ufficio-di-lavoro-familiare-e-produttivo" target="_blank">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Scopri come rendere il tuo ufficio di lavoro familiare e produttivo</div>
+                                    <p class="mb-0">Perché è importante che l’ufficio rispecchi alcuni tratti della nostra personalità</p>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/benessere-persone.jpg" alt="ufficio ergonomico" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action-->
+        <section class="content-section bg-primary text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Se vuoi approfondire il mio profilo</h2>
+                <a class="btn btn-xl btn-light me-4" href="assets/img/cv-roccoizzo.png" target="_blank">Scarica il mio <b>CV</b>!</a>
+
+            </div>
+        </section>
+
+
+        <!-- Footer-->
+        <footer class="footer text-center">
+
+            <!---Form di contatto----->
+            <h2 class="mb-4">Restiamo in contatto</h2>
+
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label> <font color="#1D809F">Nome</font></label><br>
+                    <input type="text" name="user_name"><br>
+
+                    <label><font color="#1D809F">Email</font></label><br>
+                    <input type="email" name="user_email"><br>
+
+                    <label><font color="#1D809F">Messaggio</font></label><br>
+                    <textarea name="message"></textarea><br>
+                    <input type="submit" value="Invia">
+                </form>
+                <br>
+                <br>
+
+                <div class="container px-4 px-lg-5">
+                    <ul class="list-inline mb-5">
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rocco-izzo/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white" href="https://github.com/roccoizzo94"><i class="icon-social-github"></i></a>
+                        </li>
+                    </ul>
+                    <p class="text-muted small mb-0">Rocco Izzo © 2022</p>
+                </div>
+        </footer>
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
